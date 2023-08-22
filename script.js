@@ -10,7 +10,7 @@ class Node {
     this.children.push(new Node(data));
   }
 
-  // traverses all children of a given node and removes the ones that match the data
+  // visits all children of a given node and removes the ones that match the data
   remove(data) {
     this.children = this.children.filter((node) => {
       return node.data !== data;
@@ -80,14 +80,15 @@ class Tree {
 
   // depth-first traversal (pre-order)
   depthFirstTraversal(node = this.root) {
+    // base case: return if current node is non-existent
     if (!node) {
       return;
     }
 
     console.log(node.data); // process the node's data
 
+    // recursively traverse each child of the current node
     for (const child of node.children) {
-      // recursively traverse the children
       this.depthFirstTraversal(child);
     }
   }
@@ -105,4 +106,4 @@ tree.root.children[1].add("G");
 
 tree.prettyPrint();
 
-tree.breadthFirstTraversal();
+tree.depthFirstTraversal();
