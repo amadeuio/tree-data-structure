@@ -57,6 +57,30 @@ class Tree {
     console.log(lines.join("\n"));
   }
 
+  // adds a given node as a child of a specified parent node
+  addChildToParent(childData, parentData) {
+    if (!this.root) {
+      console.log("Tree is empty.");
+      return;
+    }
+
+    // traverse the tree (depth-first, pre-order)
+    function findNodeAndAdd(node) {
+      // when the parent has been found, adds child's data
+      if (node.data === parentData) {
+        node.children.push(new Node(childData));
+        return;
+      }
+
+      for (const child of node.children) {
+        findNodeAndAdd(child);
+      }
+    }
+
+    // call findNodeAndAdd starting from the root of the tree
+    findNodeAndAdd(this.root);
+  }
+
   // breadth-first traversal
   breadthFirstTraversal() {
     if (!this.root) {
@@ -104,6 +128,6 @@ tree.root.children[0].add("E");
 tree.root.children[1].add("F");
 tree.root.children[1].add("G");
 
-tree.prettyPrint();
+tree.addChildToParent("child", "C");
 
-tree.depthFirstTraversal();
+tree.prettyPrint();
