@@ -66,12 +66,13 @@ class Tree {
 
     // traverse the tree (depth-first, pre-order)
     function findNodeAndAdd(node) {
-      // when the parent has been found, adds child's data
+      // base case: when the parent has been found, create & add child node
       if (node.data === parentData) {
         node.children.push(new Node(childData));
         return;
       }
 
+      // recursive case
       for (const child of node.children) {
         findNodeAndAdd(child);
       }
