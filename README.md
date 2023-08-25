@@ -21,6 +21,14 @@ This repo implements a Tree Data Structure in TypeScript, with some methods to m
 
 ### Methods 🔧
 
-- 🌳 `buildTree()`: Builds the tree from a sorted array.
+# Node
+
+- ➕ `add(data)`: Adds a new child node as a child of a given node
+
+- ➖ `remove(data)`: Removes all child nodes of a given node with matching data
+
+# Tree
+
+- 🌿 `prettyPrint()`: Prints the tree in a visually appealing format.
 
 ### Usage 🖊️
