@@ -16,18 +16,19 @@ This repo implements a Tree Data Structure in TypeScript, with some methods to m
 ### Resources Used 💡
 
 - [JavaScript Today](https://blog.javascripttoday.com/blog/tree-data-structure-with-javascript)
+- [GPT](https://chat.openai.com)
 
 ### Challenges 😅
 
 ### Methods 🔧
 
-# Node
+#### Node Class
 
-- ➕ `add(data)`: Adds a new child node as a child of a given node
+- ➕ `add(data)`: Adds a new child node as a child of a given node.
 
-- ➖ `remove(data)`: Removes all child nodes of a given node with matching data
+- ➖ `remove(data)`: Removes all child nodes of a given node with matching data.
 
-# Tree
+#### Tree Class
 
 - 🌿 `prettyPrint()`: Prints the tree in a visually appealing format.
 
