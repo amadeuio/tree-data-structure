@@ -117,9 +117,28 @@ class Tree {
       this.depthFirstTraversal(child);
     }
   }
+
+  // returns the height starting from a given node
+  // defined as the number of edges (steps) in longest path from a given node to a leaf node
+  height(node = this.root) {
+    // there is no node
+    if (!node) {
+      return 0;
+      // it's a leaf (has a height of 1)
+    } else if (node.children.length === 0) {
+      return 1;
+      // calculate height recursively for current node and children
+    } else {
+      const heights = node.children.map((child) => this.height(child));
+      // find the max value of heights array
+      // add 1 to account for the current node
+      return 1 + Math.max(...heights);
+    }
+  }
 }
 
 // example usage
+
 const tree = new Tree();
 tree.root = new Node("A");
 tree.root.add("B");
@@ -130,5 +149,7 @@ tree.root.children[1].add("F");
 tree.root.children[1].add("G");
 
 tree.addChildToParent("child", "C");
+
+console.log(tree.height());
 
 tree.prettyPrint();

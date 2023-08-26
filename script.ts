@@ -132,6 +132,8 @@ class Tree {
   }
 }
 
+// example usage
+
 const tree = new Tree();
 tree.root = new Node("A");
 tree.root.add("B");
