@@ -68,6 +68,31 @@ class Tree {
     console.log(lines.join("\n"));
   }
 
+  // counts total number of nodes in the tree
+  countNodes(): number {
+    let count: number = 0;
+    // helper function that navigates the tree in depth-first traversal and counts nodes,
+    // updating the count variable accordingly
+    function countRecursive(node: Node | null): void {
+      // base case: if there is no node, stop recursion
+      if (!node) return;
+
+      // increment count for the current node
+      count++;
+
+      // call itself for each child of the current node
+      for (const child of node.children) {
+        countRecursive(child);
+      }
+    }
+
+    // start counting from root
+    countRecursive(this.root);
+
+    // return the total count of nodes in the tree
+    return count;
+  }
+
   // adds a given node as a child of a specified parent node
   addChildToParent(childData: string, parentData: string): void {
     if (!this.root) {
