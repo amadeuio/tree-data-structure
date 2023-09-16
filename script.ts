@@ -186,8 +186,6 @@ tree.root.children[0].add("E");
 tree.root.children[1].add("F");
 tree.root.children[1].add("G");
 
-console.log(tree);
-
 tree.prettyPrint();
 
 tree.addChildToParent("child", "C");

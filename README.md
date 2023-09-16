@@ -109,7 +109,7 @@ Tree { root: Node { data: 'A', children: [ [Node], [Node] ] } }
 
 - Let's print each value in breadth-first traversal
 
-`tree.depthFirstTraversal() // A, B, C, D, E, F, G, child`
+`tree.breadthFirstTraversal() // A, B, C, D, E, F, G, child`
 
 - Let's find the number of nodes in the tree
 

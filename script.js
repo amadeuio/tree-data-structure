@@ -173,10 +173,16 @@ tree.root.children[0].add("E");
 tree.root.children[1].add("F");
 tree.root.children[1].add("G");
 
-tree.addChildToParent("child", "C");
+tree.prettyPrint();
 
-console.log(tree.countNodes());
+tree.addChildToParent("child", "C");
 
 tree.prettyPrint();
 
+tree.depthFirstTraversal();
+
 tree.breadthFirstTraversal();
+
+console.log(tree.countNodes());
+
+console.log(tree.height());
