@@ -86,7 +86,7 @@ Tree { root: Node { data: 'A', children: [ [Node], [Node] ] } }
         └──G
 ```
 
-- Let's add a node with data 'child' as a child of the node with data 'C'
+- Let's add a node with data "child" as a child of the node with data "C"
 
 `tree.addChildToParent("child", "C")`
 
