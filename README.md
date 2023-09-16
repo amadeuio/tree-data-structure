@@ -34,10 +34,56 @@ Recursive methods are still challenging, and gaining familiarity type annotation
 
 - 🌿 `prettyPrint()`: Prints the tree in a visually appealing format.
 
-- `addChildToParent(childData: string, parentData: string)`: Adds a node as a child of another.
+- ➕ `addChildToParent(childData: string, parentData: string)`: Adds a node as a child of another.
 
-- `breadthFirstTraversal()`: Performs a breadth first traversal, printing each node's data.
+- 🌐 `breadthFirstTraversal()`: Performs a breadth-first traversal, printing each node's data.
 
-- `depthFirstTraversal(node: Node | null = this.root)`: 
+- ⏯️ `depthFirstTraversal()`: Performs a pre-order depth-first traversal, printing each node's data.
+
+- 🔢 `countNodes()`: Counts the total number of nodes in the tree.
+
+- 📏 `height(node)`: Returns the height, defined as the number of edges (steps) in the longest path from a given node to a leaf node.
 
 ### Usage 🖊️
+
+- Create a tree
+
+`const tree = new Tree()`
+
+- Create a node, and assign it to be the root of the tree
+
+`tree.root = new Node("A")`
+
+- Add some children to the root
+
+```typescript
+tree.root.add("B");
+tree.root.add("C");
+```
+
+- Add some grand children to the root
+
+```typescript
+tree.root.children[0].add("D");
+tree.root.children[0].add("E");
+tree.root.children[1].add("F");
+tree.root.children[1].add("G");
+```
+
+- We built a basic tree. If we `console.log(tree)` it looks like this
+
+```typescript
+Tree { root: Node { data: 'A', children: [ [Node], [Node] ] } }
+```
+
+- Let's use `tree.prettyPrint()` for a more intuitive representation
+
+```typescript
+└──A
+    ├──B
+    │    ├──D
+    │    └──E
+    └──C
+        ├──F
+        └──G
+```
