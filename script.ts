@@ -192,6 +192,8 @@ tree.prettyPrint();
 
 tree.addChildToParent("child", "C");
 
+tree.prettyPrint();
+
 tree.depthFirstTraversal();
 
 tree.breadthFirstTraversal();

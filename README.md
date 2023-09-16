@@ -87,3 +87,36 @@ Tree { root: Node { data: 'A', children: [ [Node], [Node] ] } }
         ├──F
         └──G
 ```
+
+- Let's add a node with data 'child' as a child of the node with data 'C'
+
+`tree.addChildToParent("child", "C")`
+
+- If we `tree.prettyPrint()`
+
+```typescript
+└──A
+    ├──B
+    │    ├──D
+    │    └──E
+    └──C
+        ├──F
+        ├──G
+        └──child
+```
+
+- Let's print each value in depth-first traversal
+
+`tree.depthFirstTraversal() // A, B, D, E, C, F, G, child`
+
+- Let's print each value in breadth-first traversal
+
+`tree.depthFirstTraversal() // A, B, C, D, E, F, G, child`
+
+- Let's find the number of nodes in our tree
+
+`console.log(tree.countNodes()) // 8`
+
+- Let's find the height of the tree
+
+`console.log(tree.height()) // 3`
