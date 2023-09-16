@@ -57,31 +57,6 @@ class Tree {
     console.log(lines.join("\n"));
   }
 
-  // counts total number of nodes in the tree
-  countNodes() {
-    let count = 0;
-    // helper function that navigates the tree in depth-first traversal and counts nodes,
-    // updating the count variable accordingly
-    function countRecursive(node) {
-      // base case: if there is no node, stop recursion
-      if (!node) return;
-
-      // increment count for the current node
-      count++;
-
-      // call itself for each child of the current node
-      for (const child of node.children) {
-        countRecursive(child);
-      }
-    }
-
-    // start counting from root
-    countRecursive(this.root);
-
-    // return the total count of nodes in the tree
-    return count;
-  }
-
   // adds a given node as a child of a specified parent node
   addChildToParent(childData, parentData) {
     if (!this.root) {
@@ -108,13 +83,13 @@ class Tree {
   }
 
   // breadth-first traversal
-  breadthFirstTraversal() {
-    if (!this.root) {
+  breadthFirstTraversal(node = this.root) {
+    if (!node) {
       console.log("Tree is empty.");
       return;
     }
 
-    const queue = [this.root]; // initialize a queue with the root node
+    const queue = [node]; // initialize a queue with the root node
 
     while (queue.length > 0) {
       const currentNode = queue.shift(); // dequeue the front node
@@ -141,6 +116,31 @@ class Tree {
     for (const child of node.children) {
       this.depthFirstTraversal(child);
     }
+  }
+
+  // counts total number of nodes in the tree
+  countNodes() {
+    let count = 0;
+    // helper function that navigates the tree in depth-first traversal and counts nodes,
+    // updating the count variable accordingly
+    function countRecursive(node) {
+      // base case: if there is no node, stop recursion
+      if (!node) return;
+
+      // increment count for the current node
+      count++;
+
+      // call itself for each child of the current node
+      for (const child of node.children) {
+        countRecursive(child);
+      }
+    }
+
+    // start counting from root
+    countRecursive(this.root);
+
+    // return the total count of nodes in the tree
+    return count;
   }
 
   // returns the height starting from a given node
@@ -178,3 +178,5 @@ tree.addChildToParent("child", "C");
 console.log(tree.countNodes());
 
 tree.prettyPrint();
+
+tree.breadthFirstTraversal();

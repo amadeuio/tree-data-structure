@@ -20,6 +20,8 @@ This repo implements a Tree Data Structure in TypeScript, with some methods to m
 
 ### Challenges 😅
 
+Recursive methods are still challenging, and gaining familiarity type annotations in TypeScript.
+
 ### Methods 🔧
 
 #### Node Class
@@ -31,5 +33,11 @@ This repo implements a Tree Data Structure in TypeScript, with some methods to m
 #### Tree Class
 
 - 🌿 `prettyPrint()`: Prints the tree in a visually appealing format.
+
+- `addChildToParent(childData: string, parentData: string)`: Adds a node as a child of another.
+
+- `breadthFirstTraversal()`: Performs a breadth first traversal, printing each node's data.
+
+- `depthFirstTraversal(node: Node | null = this.root)`: 
 
 ### Usage 🖊️
