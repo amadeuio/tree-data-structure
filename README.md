@@ -9,7 +9,7 @@ We've already learned about [Binary Search Trees (BSTs)](https://github.com/nigh
 
 ### Description 📚
 
-This repo implements a Tree Data Structure in TypeScript, with some methods to modify and traverse the tree.
+This repo implements a Tree Data Structure in TypeScript, with some methods to modify and traverse the tree. A JavaScript version is also provided.
 
 ### Resources Used 💡
 
