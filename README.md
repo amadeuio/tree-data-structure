@@ -32,7 +32,7 @@ Recursive methods and gaining familiarity type annotations in TypeScript.
 
 - 🌿 `prettyPrint()`: Prints the tree in a visually appealing format.
 
-- ➕ `addChildToParent(childData: string, parentData: string)`: Adds a node as a child of another.
+- ➕ `addChildToParent(childData, parentData)`: Adds a node as a child of another.
 
 - 🌐 `breadthFirstTraversal()`: Performs a breadth-first traversal, printing each node's data.
 
