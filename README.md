@@ -5,7 +5,7 @@
 
 ### About 📖
 
-We've already learned about [Binary Search Trees (BSTs)](https://github.com/nightrunner4/binary-search-trees), a type of tree data structure where each node can have at most two children, and the values of the nodes are ordered. In a generic data tree that condition is not necesarily true, and I also wanted to learn about them.
+We've already learned about [Binary Search Trees (BSTs)](https://github.com/amadeuio/binary-search-trees), a type of tree data structure where each node can have at most two children, and the values of the nodes are ordered. In a generic data tree that condition is not necesarily true, and I also wanted to learn about them.
 
 ### Description 📚
 
